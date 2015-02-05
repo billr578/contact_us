@@ -1,4 +1,4 @@
-class ContactUs::ContactsController < ApplicationController
+class ContactUs::ContactsController < ContactUs.parent_controller.constantize
 
   def create
     @contact = ContactUs::Contact.new(params[:contact_us_contact])

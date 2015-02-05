@@ -19,6 +19,10 @@ module ContactUs
   # URL after a successful submission
   mattr_accessor :success_redirect
 
+  # Configure parent controller
+  mattr_accessor :parent_controller
+  @@parent_controller = 'ApplicationController'
+
   # Default way to setup ContactUs. Run rake contact_us:install to create
   # a fresh initializer with all configuration values.
   def self.setup
